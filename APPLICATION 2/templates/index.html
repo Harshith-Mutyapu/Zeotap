@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Date</th>
+                    <th>Temperature</th>
+                    <th>Feels Like</th>
+                    <th>Condition</th>
+                    <th>Humidity</th>
+                    <th>Wind Speed</th>
+                    <th>Pressure</th>
+                    <th>Sunrise</th>
+                    <th>Sunset</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in weather_data %}
+                <tr>
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ record[2] }}°C</td>
+                    <td>{{ record[3] }}°C</td>
+                    <td>{{ record[4] }}</td>
+                    <td>{{ record[5] }}%</td>
+                    <td>{{ record[6] }} m/s</td>
+                    <td>{{ record[7] }} hPa</td>
+                    <td>{{ record[8] }}</td>
+                    <td>{{ record[9] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

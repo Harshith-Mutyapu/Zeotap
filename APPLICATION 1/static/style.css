@@ -1,0 +1,27 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4797af;
+    color: white;
+    border: none;
+}
+
+
+Received data: {'rule': 'age > 30 AND department = 'Sales'', 'age': 35, 'department': 'Sales', 'salary': 60000, 'experience': 3}
+Rule string: age > 30 AND department = 'Sales'
+User data: {'age': 35, 'department': 'Sales', 'salary': 60000, 'experience': 3}
+Generated AST: Node(operator, left=Node(operand, age > 30), right=Node(operand, department = 'Sales'))
+Evaluation result: True
